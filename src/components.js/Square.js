@@ -2,7 +2,11 @@ import React, { useState } from 'react';
 
 function Square({ value, squares, handleClick }) {
   return (
-    <button className='square' onClick={handleClick} id={value}>
+    <button
+      className='square'
+      onClick={(e) => handleClick(e.target.id)}
+      id={value}
+    >
       {squares[value]}
     </button>
   );
